@@ -32,7 +32,7 @@ about:
   home: https://github.com/Ceasar/easywatch
   license: MIT
   license_family: MIT
-  license_file: LICENSE  # in recipe: https://github.com/Ceasar/easywatch/pull/11#issuecomment-413243017
+  license_file: LICENSE
   summary: 'Dead-simple way to watch a directory'
   dev_url: https://github.com/Ceasar/easywatch
 
