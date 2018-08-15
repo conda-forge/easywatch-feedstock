@@ -1,6 +1,6 @@
 {% set name = "easywatch" %}
-{% set version = "0.0.4" %}
-{% set sha256 = "e7128dd787db73839051c1ec55e0b497b0a6256b8a4a56d7e91a14741a35a041" %}
+{% set version = "0.0.5" %}
+{% set sha256 = "0cded70106083eade6e32f66eef1f9400cb039f4c6f70e91c4499ffda26480ac" %}
 
 package:
   name: {{ name|lower }}
@@ -32,7 +32,7 @@ about:
   home: https://github.com/Ceasar/easywatch
   license: MIT
   license_family: MIT
-  license_file: LICENSE  # in recipe: https://github.com/Ceasar/easywatch/pull/11#issuecomment-413243017
+  license_file: LICENSE
   summary: 'Dead-simple way to watch a directory'
   dev_url: https://github.com/Ceasar/easywatch
 
