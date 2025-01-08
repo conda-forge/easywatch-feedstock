@@ -1,30 +1,31 @@
 {% set name = "easywatch" %}
 {% set version = "0.0.5" %}
-{% set sha256 = "0cded70106083eade6e32f66eef1f9400cb039f4c6f70e91c4499ffda26480ac" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 0cded70106083eade6e32f66eef1f9400cb039f4c6f70e91c4499ffda26480ac
 
 build:
   noarch: python
-  number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  number: 1
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
+    - setuptools
     - pip
   run:
-    - python
+    - python >={{ python_min }}
     - watchdog
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - easywatch
 
